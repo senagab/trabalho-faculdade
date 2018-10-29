@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="icon" type="image/png" href="laranja48.png"/>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>yikes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</head>
+<body>  
+    <nav style="position: relative; padding: 0 30px;">
+        <div class="left brand-logo">
+            <a href="index.html" style="font-weight:600;"><img src="laranja.png">magrathea!</a>
+        </div>
+        <div class="right">
+            <ul style="text-decoration:none;">
+                <li><a href="trending.html" style="#fff">link 1</a></li>
+                <li><a href="list.html" style="#fff">link 2</a></li>
+                <li><a href="#" style="#fff">link 3</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+        <div class="col s12">
+            <div style="margin-top:60px;"></div>
+            <h2 style="color:#fff;">yours</h2>
+            <div style="margin-top:30px;"></div>
+            <p style="color:#fff;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="tabela">
+            <div class="col s12 repeticao" style="margin-top:60px;">
+                <div class="col l9 s12" style="font-weight:700;">name</div>
+                <div class="col l1 s12 center-align" style="font-weight:700;">view</div>
+                <div class="col l1 s12 center-align" style="font-weight:700;">edit</div>
+                <div class="col l1 s12 center-align " style="font-weight:700;">delete</div>
+            </div>
+            <!-- REPETICAO -->
+            <div class="col s12 repeticao" id="titulo-lista">
+                <div class="col l9 s12">top 10</div>
+                <div class="col l1 s12 center-align"><a href="view-2.html" class="waves-effect btn modal-trigger btn-small"><i class="far fa-eye" style="color:white;"></i></a></div>
+                <div class="col l1 s12 center-align"><a href="#modal1" class="waves-effect btn modal-trigger btn-small"><i class="fas fa-pen-square" style="color:white;"></i></a></div>
+                <div class="col l1 s12 center-align"><a href="#modal2" class="waves-effect waves-red btn modal-trigger btn-small"><i class="fas fa-times-circle" style="color:white;"></i></i></a></div>
+            </div>
+            <!-- FIM REPETICAO -->
+            <!-- REPETICAO -->
+            <div class="col s12 repeticao" id="titulo-lista">
+                <div class="col l9 s12">garbage aka marvel</div>
+                <div class="col l1 s12 center-align"><a href="#" class="waves-effect btn modal-trigger btn-small"><i class="far fa-eye" style="color:white;"></i></a></div>
+                <div class="col l1 s12 center-align"><a href="#modal1" class="waves-effect btn modal-trigger btn-small"><i class="fas fa-pen-square" style="color:white;"></i></a></div>
+                <div class="col l1 s12 center-align"><a href="#modal2" class="waves-effect waves-red btn modal-trigger btn-small"><i class="fas fa-times-circle" style="color:white;"></i></i></a></div>
+            </div>
+            <!-- FIM REPETICAO -->
+            <!-- REPETICAO -->
+            <div class="col s12 repeticao" id="titulo-lista">
+                    <div class="col l9 s12">filmes de omen</div>
+                    <div class="col l1 s12 center-align"><a href="#" class="waves-effect btn modal-trigger btn-small"><i class="far fa-eye" style="color:white;"></i></a></div>
+                    <div class="col l1 s12 center-align"><a href="#modal1" class="waves-effect btn modal-trigger btn-small"><i class="fas fa-pen-square" style="color:white;"></i></a></div>
+                    <div class="col l1 s12 center-align"><a href="#modal2" class="waves-effect waves-red btn modal-trigger btn-small"><i class="fas fa-times-circle" style="color:white;"></i></i></a></div>
+                </div>
+                <!-- FIM REPETICAO -->
+            </div>
+        </div>
+        
+
+    <!-- Modal Edit -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+        <h4>You're editing stuff</h4>
+        <p>Are you sure you want to do this?</p>
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                    <label for="textarea1">new list title</label>
+                </div>
+            </div>
+        </form>
+        </div>
+        <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect btn-flat">Cancel</a>
+        <a href="#!" class="modal-close waves-effect btn-flat">Save</a>
+        </div>
+    </div>
+
+    <!-- Modal Delete -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+        <h4>You're deleting something important</h4>
+        <p>Are you sure you want to do this?</p>
+        </div>
+        <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect btn-flat">Certainly not</a>
+        <a href="#!" class="modal-close waves-effect btn-flat">Hell yeah</a>
+        </div>
+    </div>
+            
+
+    <style>
+        body {
+            background-color:#888484;
+        }
+        nav {
+            background-color:#e07847;
+        }
+
+        .btn {
+            background-color: #e6920d !important;
+            color: #f9f9f9 !important;
+        }
+
+        .btn-small {
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+
+        .tabela {
+            color:white;
+            display: table-cell;
+            border-radius: 2px;
+        }
+        .separador {
+            margin-top:25px;
+        }
+        .repeticao {
+            padding: 10px 0 !important;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+            display: flex;
+            align-items: center;
+        }
+    </style>
+
+
+    <!-- Compiled and minified JavaScript -->
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $('.modal').modal();
+        });
+
+        $(document).ready(function(){
+            $('select').formSelect();
+        });
+    </script>
+</body>
+</html>
