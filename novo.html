@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>teste</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+    
+
+
+    <h1>trending</h1>
+
+    <div id="app">
+        <div v-for="filme in filmes">
+            <img v-bind:src="'https://image.tmdb.org/t/p/w92'+filme.poster_path"> 
+            <span><strong>{{filme.title}}</strong>:</span>
+            <p><span>{{filme.vote_average}} / 10</span> 
+            <strong>Sinopse:</strong> {{filme.overview}}</p><br>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+
+    <script>
+
+
+        const app = new Vue({
+            el:'#app',
+            data:{
+                filmes:[]
+            },
+            mounted(){
+              fetch("https://api.themoviedb.org/3/trending/movie/week?api_key=a4accb20c5e0a70f856e96b508717ccd")
+              // a4accb20c5e0a70f856e96b508717ccd
+              .then(response => response.json())
+              .then((data) => {
+                  this.filmes = data.results;
+                  console.log(data.results);
+              })
+            }
+        })
+
+        const busca = new Vue({
+            el:'#busca',
+            data:{
+                filmes:[]
+            },
+            mounted(){
+              fetch("https://api.themoviedb.org/3/search/movie?api_key=a4accb20c5e0a70f856e96b508717ccd&query=?")
+              // a4accb20c5e0a70f856e96b508717ccd
+              .then(response => response.json())
+              .then((data) => {
+                  this.filmes = data.results;
+                  console.log(data.results);
+              })
+            }
+        })
+    </script>
+</body>
+</html>
+
+<!-- https://developers.themoviedb.org/trending/getting-started/authorization -->
